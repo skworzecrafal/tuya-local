@@ -1,0 +1,47 @@
+name: Energy monitoring smartplug
+products:
+  - id: "370053454855194e5607"
+    manufacturer: Gosund
+    model: EP2
+  - id: 37mnhia3pojleqfh
+    model: SP111-A
+  - id: kOKEJBFoF9VNB5FR
+    model: HYS-U1S-13A
+entities:
+  - entity: switch
+    class: outlet
+    dps:
+      - id: 1
+        type: boolean
+        name: switch
+  - entity: sensor
+    category: diagnostic
+    class: voltage
+    dps:
+      - id: 6
+        name: sensor
+        type: integer
+        class: measurement
+        unit: V
+        mapping:
+          - scale: 10
+  - entity: sensor
+    category: diagnostic
+    class: current
+    dps:
+      - id: 4
+        name: sensor
+        type: integer
+        class: measurement
+        unit: mA
+  - entity: sensor
+    category: diagnostic
+    class: power
+    dps:
+      - id: 5
+        name: sensor
+        type: integer
+        class: measurement
+        unit: W
+        mapping:
+          - scale: 10

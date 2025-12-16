@@ -1,0 +1,53 @@
+name: Smoke detector
+products:
+  - id: gyzlwu5q
+entities:
+  - entity: sensor
+    name: smoke_sensor_state
+    class: enum
+    dps:
+      - id: 1
+        type: string
+        name: sensor
+        mapping:
+          - dps_val: alarm
+            value: Alarm
+          - dps_val: normal
+            value: Normalny
+          - dps_val: detecting
+            value: Wykrywanie
+          - dps_val: unknown
+            value: Nieznany
+  - entity: sensor
+    name: battery_state
+    class: enum
+    dps:
+      - id: 14
+        type: string
+        name: sensor
+        mapping:
+          - dps_val: low
+            value: Niski
+          - dps_val: middle
+            value: Średni
+          - dps_val: high
+            value: Wysoki
+  - entity: sensor
+    class: temperature
+    dps:
+      - id: 23
+        type: integer
+        name: sensor
+        unit: C
+        class: measurement
+        mapping:
+          - scale: 10
+            step: 1
+  - entity: sensor
+    class: humidity
+    dps:
+      - id: 24
+        type: integer
+        name: sensor
+        unit: "%"
+        class: measurement

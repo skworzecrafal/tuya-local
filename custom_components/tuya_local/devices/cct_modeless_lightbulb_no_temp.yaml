@@ -1,0 +1,17 @@
+name: CCT light
+products:
+  - id: ewrj9uit2axunpyn
+    manufacturer: Connect
+    model: CSH-GU53WW5W
+entities:
+  - entity: light
+    dps:
+      - id: 1
+        type: boolean
+        name: switch
+      - id: 3
+        name: brightness
+        type: integer
+        range:
+          min: 10
+          max: 1000
